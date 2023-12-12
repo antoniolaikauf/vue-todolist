@@ -45,7 +45,7 @@ createApp({
         },
         // aggiunta task dentro array todos
         addTask(){
-            if (this.taskAggiunta < 5) {
+            if (this.taskAggiunta.length < 5) {
                alert("la task deve almeno avere 5 caratteri")
             }else{
                 this.todos.push({"text":this.taskAggiunta,"done":false})
