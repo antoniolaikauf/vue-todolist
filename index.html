@@ -19,7 +19,11 @@
         <button @click="addTask">aggiungi</button>
 
         <div>
-            <ul>
+        <!-- controllo se non ci sono tasks all'interno dell'array -->
+            <div v-if="todos.length===0">
+                non ci sono tasks
+            </div>
+            <ul v-else>
             <!-- inserimento delle tasks dell'array dentro html -->
                 <li v-for="(task,i) in todos"  :key="i"  @click="remove(i)">
                     <!-- controllo se le tasks sono fatte o no -->

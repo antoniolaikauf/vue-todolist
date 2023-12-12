@@ -36,7 +36,6 @@ createApp({
                     done: false
                 }
             ],
-            // newTask:{},
         }
     },
     methods:{
@@ -44,9 +43,14 @@ createApp({
         remove(indice){
             this.todos.splice(indice,1)
         },
+        // aggiunta task dentro array todos
         addTask(){
-            this.todos.push({"text":this.taskAggiunta,"done":false})
-            this.taskAggiunta=""
+            if (this.taskAggiunta < 5) {
+               alert("la task deve almeno avere 5 caratteri")
+            }else{
+                this.todos.push({"text":this.taskAggiunta,"done":false})
+                this.taskAggiunta=""
+            }
         }
     }
 }).mount("#app")
