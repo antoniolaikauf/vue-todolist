@@ -19,12 +19,17 @@
         <div>
             <ul>
             <!-- inserimento delle tasks dell'array dentro html -->
-                <li v-for="task in todos">
-                   {{task.text}}
+                <li v-for="(task,i) in todos"  :key="i">
+                    <!-- controllo se le tasks sono fatte o no -->
+                    <del  v-if="task.done === true">
+                        {{task.text}}
+                    </del>
+                    <span v-else>
+                        {{task.text}}
+                    </span>
                 </li>
             </ul>
         </div>
-
     </div>
 
 
