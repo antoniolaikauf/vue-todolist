@@ -15,8 +15,8 @@
 
     <div id="app">
         <!-- input per tasks -->
-        <input type="text">
-        <button>aggiungi</button>
+        <input type="text" v-model="taskAggiunta">
+        <button @click="addTask">aggiungi</button>
 
         <div>
             <ul>
