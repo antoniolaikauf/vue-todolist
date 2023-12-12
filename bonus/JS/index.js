@@ -52,17 +52,14 @@ createApp({
                 this.taskAggiunta=""
             }
         },
-         switchDone(ci){
-           for (let i = 0; i < this.todos.length; i++) {
-                    
-                if (this.todos[i].done === false) {
-                    this.todos[ci].done = true
+         switchDone(index){
+                //  funzione per sbarrare le tasks
+                if (this.todos[index].done === false) {
+                    this.todos[index].done = true
                 }
-                else if (this.todos[i].done === true) {
-                     this.todos[ci].done = false
+                else if (this.todos[index].done === true) {
+                     this.todos[index].done = false
                 }
-            
-           }
         }
     }
 }).mount("#app");
