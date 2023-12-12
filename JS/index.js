@@ -37,4 +37,10 @@ createApp({
             ],
         }
     },
+    methods:{
+        // rimozione della tasks
+        remove(indice){
+            this.todos.splice(indice,1)
+        },
+    }
 }).mount("#app")
