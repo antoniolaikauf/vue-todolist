@@ -25,15 +25,15 @@
             </div>
             <ul v-else>
             <!-- inserimento delle tasks dell'array dentro html -->
-                <li v-for="(task,i) in todos"  :key="i"  @click="remove(i)">
+                <li v-for="(task,i) in todos"  :key="i" >
                     <!-- controllo se le tasks sono fatte o no -->
                     <del  v-if="task.done === true">
                         {{task.text}}
-                        <i class="fa-solid fa-x"></i>
+                        <i class="fa-solid fa-x" @click="remove(i)"></i>
                     </del>
                     <span v-else>
                         {{task.text}}
-                        <i class="fa-solid fa-x"  ></i>
+                        <i class="fa-solid fa-x"  @click="remove(i)"></i>
                     </span>
                 </li>
             </ul>

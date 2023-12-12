@@ -51,6 +51,21 @@ createApp({
                 this.todos.push({"text":this.taskAggiunta,"done":false})
                 this.taskAggiunta=""
             }
+        },
+         switchDone(ci){
+           for (let i = 0; i < this.todos.length; i++) {
+                    
+                if (this.todos[i].done === false) {
+                    this.todos[ci].done = true
+                }
+                else if (this.todos[i].done === true) {
+                     this.todos[ci].done = false
+                }
+            
+           }
         }
     }
-}).mount("#app")
+}).mount("#app");
+
+
+// keyup va messo all'input
