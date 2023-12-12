@@ -18,8 +18,9 @@
 
         <div>
             <ul>
-                <li>
-                    tasks
+            <!-- inserimento delle tasks dell'array dentro html -->
+                <li v-for="task in todos">
+                   {{task.text}}
                 </li>
             </ul>
         </div>
