@@ -27,12 +27,16 @@
             <!-- inserimento delle tasks dell'array dentro html -->
                 <li v-for="(task,i) in todos"  :key="i" >
                     <!-- controllo se le tasks sono fatte o no -->
-                    <del  v-if="task.done === true" @click="switchDone(i)">
+                    <del  v-if="task.done === true">
+                       <span  @click="switchDone(i)">
                         {{task.text}}
+                       </span>
                         <i class="fa-solid fa-x" @click="remove(i)"></i>
                     </del>
-                    <span v-else @click="switchDone(i)">
+                    <span v-else>
+                       <span  @click="switchDone(i)">
                         {{task.text}}
+                       </span>
                         <i class="fa-solid fa-x" @click="remove(i)"></i>
                     </span>
                 </li>
